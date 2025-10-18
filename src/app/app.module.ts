@@ -13,7 +13,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     PricingComponent,
-    
     ScannerComponent
   ],
   imports: [
