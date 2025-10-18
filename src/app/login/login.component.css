@@ -1,0 +1,16 @@
+.horiLine {
+  flex: 1;
+  border: none;
+  height: 2px;
+  background-color: purple;
+  max-width: 100px;
+}
+.active-tab {
+  background-color: var(--secondaryColor) !important;
+  border: 0 !important;
+}
+
+.btnHover:hover {
+  background-color: var(--secondaryColor) !important;
+  /* border: 0 !important; */
+}

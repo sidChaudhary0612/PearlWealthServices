@@ -1,0 +1,120 @@
+<div
+  class="d-flex gap-3 vh-100 align-items-center justify-content-center primaryColor primaryBorder"
+>
+  <div
+    class="d-flex gap-4 h-75 col-11 col-md-7 col-lg-5 p-4 p-md-5 p-lg-5 rounded flex-column align-items-center justify-content-center boxShadow"
+  >
+    <div class="d-flex gap-3 flex-row">
+      <button
+        class="bg-transparent fs-7 primaryBorder primaryColor fw-bold px-lg-5 py-lg-1 px-4 py-1 btnHover"
+        [ngClass]="{ 'active-tab': activeTab === 'login' }"
+        (click)="activeTab = 'login'"
+      >
+        Log In
+      </button>
+      <button
+        class="bg-transparent fs-7 primaryBorder primaryColor fw-bold px-lg-5 py-lg-1 px-4 py-1 btnHover"
+        [ngClass]="{ 'active-tab': activeTab === 'signup' }"
+        (click)="activeTab = 'signup'"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <div
+      class="d-flex align-items-center justify-content-center fw-bold primaryColor w-100 my-3"
+    >
+      <div class="flex-grow-1 border-top primaryBorder me-3"></div>
+      <div *ngIf="activeTab == 'signup'">Sign Up for Client</div>
+      <div *ngIf="activeTab == 'login'">Log In for Membership</div>
+      <div class="flex-grow-1 border-top primaryBorder ms-3"></div>
+    </div>
+
+    <!-- SIGN UP -->
+    <div *ngIf="activeTab == 'signup'" class="d-flex flex-column gap-2 w-100">
+      <div
+        class="d-flex flex-row gap-4 align-items-center justify-content-center"
+      >
+        <span class="w-25 fw-bold fs-7">Name:</span>
+        <input
+          type="text"
+          class="form-control py-2 primaryBorder"
+          placeholder="Full Name"
+          [(ngModel)]="name"
+        />
+      </div>
+      <div
+        class="d-flex flex-row gap-4 align-items-center justify-content-center position-relative"
+      >
+        <span class="w-25 fw-bold fs-7">Phone:</span>
+        <input
+          type="text"
+          class="form-control py-2 primaryBorder"
+          placeholder="Phone No."
+          [(ngModel)]="phone"
+        />
+        <button
+          class="bg-transparent primaryBorder primaryColor rounded fs-8 position-absolute py-1 px-2 end-0 me-2 btnHover"
+          (click)="sendOtp()"
+        >
+          Send Otp
+        </button>
+      </div>
+      <div
+        class="d-flex flex-row gap-4 align-items-center justify-content-center"
+      >
+        <span class="w-25 fw-bold fs-7">Enter OTP:</span>
+        <input
+          type="text"
+          class="form-control py-2 primaryBorder"
+          placeholder="Enter Otp"
+          [(ngModel)]="otp"
+        />
+      </div>
+      <span class="text-secondary text-center my-3 fs-9"
+        >By signing up, you agree to our,
+        <span class="text-info text-decoration-underline"
+          >Membership Terms & Conditions</span
+        ></span
+      >
+      <button
+        class="bg-transparent fs-6 primaryBorder primaryColor fw-bold px-5 py-1 mt-3 btnHover"
+        (click)="signUp()"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <!-- LOGIN -->
+    <div *ngIf="activeTab == 'login'" class="d-flex flex-column gap-2 w-100">
+      <div
+        class="d-flex flex-row gap-4 align-items-center justify-content-center position-relative"
+      >
+        <span class="w-25 fw-bold fs-7">Phone:</span>
+        <input
+          type="text"
+          class="form-control py-2 primaryBorder"
+          placeholder="Phone No."
+          [(ngModel)]="phone"
+        />
+      </div>
+      <div
+        class="d-flex flex-row gap-4 align-items-center justify-content-center"
+      >
+        <span class="w-25 fw-bold fs-7">Enter OTP:</span>
+        <input
+          type="text"
+          class="form-control py-2 primaryBorder"
+          placeholder="Enter Otp"
+          [(ngModel)]="otp"
+        />
+      </div>
+      <button
+        class="bg-transparent fs-6 primaryBorder primaryColor fw-bold px-5 py-1 my-5 btnHover"
+        (click)="login()"
+      >
+        Log In
+      </button>
+    </div>
+  </div>
+</div>

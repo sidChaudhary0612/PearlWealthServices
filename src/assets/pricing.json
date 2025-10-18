@@ -1,0 +1,55 @@
+{
+  "plans": [
+    {
+      "name": "ROYAL BOX",
+      "tag": "PREMIUM PICK",
+      "description": "The ultimate access for those who demand the best",
+      "price": 51000,
+      "duration": "Once",
+      "refundable": false,
+      "features": [
+        "30 Trading Days: Full access. Full potential.",
+        "Highest accessible.",
+        "Well designed for derivative segment.",
+        "Access of Two paper bots.",
+        "Access to Live Reports.",
+        "Early access to all new features."
+      ],
+      "buttonText": "Get Membership"
+    },
+    {
+      "name": "ELITE",
+      "tag": "POPULAR",
+      "description": "All the right tools to boost your experience.",
+      "price": 6990,
+      "duration": "Once",
+      "refundable": false,
+      "features": [
+        "10 Trading Days: Two Weeks to Level Up.",
+        "Moderate–High accessible.",
+        "Well designed for cash segment.",
+        "Access of One paper bot.",
+        "Access to Live Reports.",
+        "Early access to new limited features."
+      ],
+      "buttonText": "Get Membership"
+    },
+    {
+      "name": "BUSINESS",
+      "tag": "BEST SELLER",
+      "description": "Essential benefits to get you started strong.",
+      "price": 3990,
+      "duration": "Once",
+      "refundable": false,
+      "features": [
+        "5 Trading Days: Explore Fast. Decide Smart.",
+        "Moderate accessible.",
+        "Well designed for cash segment.",
+        "Access of One paper bot.",
+        "Access to Live Reports.",
+        "Early access to limited features."
+      ],
+      "buttonText": "Get Membership"
+    }
+  ]
+}

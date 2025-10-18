@@ -1,0 +1,25 @@
+<div (click)="backBtn()" class="fs-3 position-absolute m-3 primaryColor cPr"><i class="bi bi-arrow-left-circle"></i></div>
+
+<div
+  class="d-flex align-items-center justify-content-center vh-100"
+  *ngIf="planData"
+>
+  <div
+    class="p-5 boxShadow d-flex flex-column align-items-center justify-content-center text-center col-lg-5 col-md-8 col-11"
+  >
+    <span class="fw-bold fs-4">{{ planData.name }}</span>
+    <span class="fw-bold fs-4">₹ {{ planData.price | number }}</span>
+    <p class="text-secondary">({{ planData.description }})</p>
+    <div class="primaryBorderBold d-flex flex-column p-5 rounded mb-3">
+      <img
+        src="./../../assets/DummyScanner.png"
+        alt="QR Code"
+        width="200"
+        class="boxShadow my-3 rounded-4"
+      />
+
+      
+    </div>
+    <button class="primaryBackground text-white border-0 fs-7 ls-1 w-100 fw-semibold py-2 rounded">Confirm & Start</button>
+  </div>
+</div>
