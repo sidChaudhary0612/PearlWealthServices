@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   activeTab = 'login';
 
   name = '';
@@ -14,8 +14,7 @@ export class LoginComponent implements OnInit{
   otp = '';
 
   constructor(private router: Router) {}
-  ngOnInit(){
-  }
+  ngOnInit() {}
 
   sendOtp() {
     if (!this.phone) {
@@ -35,7 +34,7 @@ export class LoginComponent implements OnInit{
     const userData = {
       name: this.name,
       phone: this.phone,
-      otp: this.otp
+      otp: this.otp,
     };
 
     localStorage.setItem('userData', JSON.stringify(userData));
@@ -66,4 +65,3 @@ export class LoginComponent implements OnInit{
     this.router.navigate(['/pricing']);
   }
 }
-
